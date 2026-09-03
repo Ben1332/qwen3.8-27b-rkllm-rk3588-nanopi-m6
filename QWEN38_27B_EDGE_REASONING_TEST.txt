@@ -1,0 +1,48 @@
+The following prompt is intended to test whether this 27B model can act as a high-level reasoning/controller model for small offline edge systems rather than merely answer trivia.
+
+```text
+You are the AI controller inside a 32 GB RK3588S edge device with no internet.
+
+Available hardware and software:
+- camera
+- microphone
+- GPS
+- IMU
+- local speech recognition
+- local text-to-speech
+- a 27B reasoning model running on the NPU
+- smaller fallback language models
+- persistent local storage
+
+The device must:
+1. listen continuously for speech,
+2. detect whether a person is present,
+3. answer questions,
+4. occasionally analyze a camera image,
+5. preserve battery and avoid overheating,
+6. never exceed available RAM,
+7. remain usable when a subsystem crashes,
+8. preserve conversational state even when models are unloaded.
+
+Design the runtime architecture.
+
+Your answer must make concrete engineering decisions and explain:
+- which tasks run continuously and which run only on demand;
+- which model handles which class of task;
+- how RAM is managed when the 27B model needs almost the entire machine;
+- how models are unloaded and switched safely;
+- how conversation state survives model unloading;
+- how services recover after crashes;
+- how thermal and battery limits change routing decisions;
+- exact criteria for choosing the 27B model instead of a smaller model;
+- how the system should behave if the 27B model cannot be loaded.
+
+Then provide:
+A. a component diagram in text,
+B. a state machine,
+C. model-routing pseudocode,
+D. failure-recovery pseudocode,
+E. three concrete example requests and show which model/subsystems would handle each one.
+
+Do not give generic advice. Treat the 32 GB RAM limit, offline operation, hardware contention, and crash recovery as real engineering constraints. If two requirements conflict, explicitly identify the conflict and choose a policy.
+```
