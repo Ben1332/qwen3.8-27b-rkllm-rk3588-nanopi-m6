@@ -14,10 +14,10 @@
 
 ## Achievement
 
-On September 1, 2026, Ben Reynolds successfully converted Qwen3.8-27B to RKLLM W8A8 and demonstrated working NPU inference on a FriendlyElec NanoPi M6 (RK3588S).
+On September 1, 2026, Qwen3.8-27B was successfully converted to RKLLM W8A8 and demonstrated working NPU inference on a FriendlyElec NanoPi M6 (RK3588S).
 
 **Priority statement:**  
-> On September 1, 2026, Ben Reynolds successfully converted Qwen3.8-27B to RKLLM W8A8 and demonstrated working NPU inference on a FriendlyElec NanoPi M6 (RK3588S). At the time of this record, no earlier independently published NanoPi M6 / RK3588S RKLLM deployment of Qwen3.8-27B was identified.
+> On September 1, 2026, Qwen3.8-27B was successfully converted to RKLLM W8A8 and demonstrated working NPU inference on a FriendlyElec NanoPi M6 (RK3588S). At the time of this record, no earlier independently published NanoPi M6 / RK3588S RKLLM deployment of Qwen3.8-27B was identified.
 
 This repository establishes a public, independently timestamped technical record.
 
@@ -168,7 +168,7 @@ C. model-routing pseudocode
 D. failure-recovery pseudocode
 E. three concrete example requests and show which model/subsystems would handle each one
 
-Do not give generic advice. Treat the 32 GB RAM limit, offline operation, hardware contention, and crash recovery as real engineering constraints. If two requirements conflict, explicitly identify the trade-off.
+Do not give generic advice. Treat the 32 GB RAM limit, offline operation, hardware contention, and crash recovery as real engineering constraints. If two requirements conflict, explicitly identify the tradeoff.
 ```
 
 ### Expected Indicators of Strong Response
@@ -197,7 +197,7 @@ Do not give generic advice. Treat the 32 GB RAM limit, offline operation, hardwa
 ## Release Notes Template
 
 ```text
-On September 1, 2026, I successfully converted Qwen3.8-27B to RKLLM W8A8
+On September 1, 2026, Qwen3.8-27B was successfully converted to RKLLM W8A8
 and demonstrated live NPU inference on a FriendlyElec NanoPi M6 (RK3588S,
 32 GB LPDDR5).
 
